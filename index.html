@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AG Properties Space Map</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="toolbar">
+      <div>
+        <h1>AG Properties Space Map</h1>
+        <p id="lastUpdated">Loading availability…</p>
+      </div>
+      <div class="controls">
+        <label>
+          Status
+          <select id="statusFilter">
+            <option value="All">All spaces</option>
+            <option value="Available">Available</option>
+            <option value="Reserved">Reserved</option>
+            <option value="Occupied">Occupied</option>
+            <option value="Unavailable">Unavailable</option>
+          </select>
+        </label>
+        <label>
+          Find space
+          <input id="spaceSearch" type="number" min="1" max="118" placeholder="e.g. 57">
+        </label>
+      </div>
+    </header>
+
+    <section class="legend" aria-label="Map legend">
+      <span><i class="swatch available"></i>Available</span>
+      <span><i class="swatch reserved"></i>Reserved</span>
+      <span><i class="swatch occupied"></i>Occupied</span>
+      <span><i class="swatch unavailable"></i>Unavailable</span>
+    </section>
+
+    <section class="map-shell">
+      <div class="map-stage" id="mapStage">
+        <img id="mapImage" alt="AG Properties storage-space master map">
+        <div id="markers" class="markers"></div>
+      </div>
+    </section>
+
+    <p class="privacy-note">
+      Only public space information is shown. Customer names, gate codes, and private notes remain in the Google Sheet.
+    </p>
+  </main>
+
+  <dialog id="spaceDialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Close">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <script src="map-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
