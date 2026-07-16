@@ -1,5 +1,5 @@
 window.AG_MAP_CONFIG = {
-  "sheetApiUrl": "",
+  "sheetApiUrl": "https://script.google.com/macros/s/AKfycbwFz9a4CEyS225RLvWzWGItau5OTGyXN20oL82A-uZlGXKNIdtdZ5nYxG19QC4cZM3_/exec",
   "refreshMinutes": 5,
   "mapImage": "ag-master-map.png",
   "statuses": {
@@ -505,11 +505,11 @@ window.AG_MAP_CONFIG = {
       "x": 8.3,
       "y": 83.29
     },
-    "C1": {
+    "300": {
       "x": 93.86,
       "y": 38.88
     },
-    "C2": {
+    "301": {
       "x": 91.27,
       "y": 38.8
     }
